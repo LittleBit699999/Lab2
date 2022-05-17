@@ -4,12 +4,11 @@ def display_main_menu():
 
 
 def get_user_input():
-    print("get_user_input")
     num_list = []
-    num_list = input()
-    num_list = str.split(",")
-    for item in num_list:
-        num_list.append(str(item))
+    strinput = input()
+    str_list = strinput.split(",")
+    for item in str_list:
+        num_list.append(int(item))
 
     return num_list
 
@@ -17,7 +16,7 @@ def get_user_input():
 def calc_average_temperature(num_list):
     print("calc_average_temperature")
     avg = sum(num_list)/len(num_list)
-    return avg
+    return round(avg,2)
 
 
 def calc_min_max_temperature(num_list):
@@ -37,7 +36,7 @@ def main():
     average = calc_average_temperature(num_list)
     print("Average temperature is", average)
     temp_list = calc_min_max_temperature(num_list)
-    print(temp_list)
+    print("The minimum and maximum temperature in the num_list are", temp_list, "respectively")
 
 
 if __name__ == "__main__":
