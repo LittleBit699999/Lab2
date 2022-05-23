@@ -2,7 +2,7 @@ import statistics
 
 
 def display_main_menu():
-    print("display_main_menu")
+    print("display_main_menu...")
     print("Enter some numbers separated by comas(e.g. 5,67,32)")
 
 
